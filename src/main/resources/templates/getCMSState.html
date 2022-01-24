@@ -1,0 +1,44 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="/css/main.css" media="screen"/>
+    <title>kakaocert SDK Springboot Example.</title>
+</head>
+<body>
+<div id="content">
+    <p class="heading1">Response</p>
+    <br/>
+    <fieldset class="fieldset1">
+        <legend th:text="${#request?.requestURL}"></legend>
+        
+        <fieldset class="fieldset2">
+            <ul>
+            	<li>receiptID(접수아이디) : <span th:text="${result.receiptID}"></span></li>
+            	<li>clientCode (이용기관코드) : <span th:text="${result.clientCode}"></span></li>
+            	<li>clientName (이용기관명) : <span th:text="${result.clientName}"></span></li>
+            	<li>subClientName (별칭) : <span th:text="${result.subClientName}"></span></li>
+            	<li>subClientCode (별칭코드) : <span th:text="${result.subClientCode}"></span></li>
+            	<li>state (상태코드) : <span th:text="${result.state}"></span></li>
+            	
+            	<li>expires_in (인증요청 만료시간(초)	) : <span th:text="${result.expires_in}"></span></li>
+                <li>callCenterNum(고객센터 전화번호) : <span th:text="${result.callCenterNum}"></span></li>
+                <li>tmstitle (인증요청 메시지 제목) : <span th:text="${result.tmstitle}"></span></li>
+                <li>tmsmessage (인증요청 메시지 부가내용) : <span th:text="${result.tmsmessage}"></span></li>
+                <li>allowSimpleRegistYN	(은행계좌 실명확인 생략여부) : <span th:text="${result.allowSimpleRegistYN}"></span></li>
+                <li>verifyNameYN (수신자 실명확인 여부) : <span th:text="${result.verifyNameYN}"></span></li>
+                <li>requestDT (카카오 인증서버 등록일시) : <span th:text="${result.requestDT}"></span></li>
+                <li>expireDT (인증 만료일시) : <span th:text="${result.expireDT}"></span></li>
+                <li>regDT (인증요청 등록일시) : <span th:text="${result.regDT}"></span></li>
+                <li>viewDT (수신자 카카오톡 인증메시지 확인일시) : <span th:text="${result.viewDT}"></span></li>
+                <li>completeDT (수신자 카카오톡 전자서명 완료일시	) : <span th:text="${result.completeDT}"></span></li>
+                <li>verifyDT (서명 검증일시) : <span th:text="${result.verifyDT}"></span></li>
+                <li>payload (payload) : <span th:text="${result.payload}"></span></li>
+                <li>appUseYN (AppToApp 인증여부) : <span th:text="${result.appUseYN}"></span></li>
+                <li>tx_id (카카오톡 트랜잭션아이디-앱스킴 호출용) : <span th:text="${result.tx_id}"></span></li>
+            </ul>
+        </fieldset>
+        
+    </fieldset>
+</div>
+</body>
+</html>
