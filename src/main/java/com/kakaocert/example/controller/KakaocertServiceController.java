@@ -54,6 +54,7 @@ public class KakaocertServiceController {
 
     /*
      * 카카오톡 사용자에게 전자서명을 요청합니다.
+     * - https://www.kakaocert.com/docs/ESign/API/java#RequestESign
      */
     @RequestMapping(value = "requestESign", method = RequestMethod.GET)
     public String requestESign(Model m) {
@@ -132,6 +133,7 @@ public class KakaocertServiceController {
 
     /*
      * 전자서명 요청시 반환된 접수아이디를 통해 서명 상태를 확인합니다.
+     * - https://www.kakaocert.com/docs/ESign/API/java#GetESignState
      */
     @RequestMapping(value = "getESignState", method = RequestMethod.GET)
     public String getESignResult(Model m) {
@@ -153,6 +155,7 @@ public class KakaocertServiceController {
      * [Talk Message] 전자서명 요청시 반환된 접수아이디를 통해 서명을 검증합니다. - 서명검증시 전자서명 데이터
      * 전문(signedData)이 반환됩니다. - 카카오페이 API 서비스 운영정책에 따라 검증 API는 1회만 호출할 수 있습니다. 재시도시
      * 오류처리됩니다.
+     * - https://www.kakaocert.com/docs/ESign/API/java#T-VerifyESign
      */
     @RequestMapping(value = "verifyESign", method = RequestMethod.GET)
     public String verfiyESign(Model m) {
@@ -174,6 +177,7 @@ public class KakaocertServiceController {
      * [App to App] 전자서명 요청시 반환된 접수아이디를 통해 서명을 검증합니다. - 서명검증시 전자서명 데이터
      * 전문(signedData)이 반환됩니다. - 카카오페이 API 서비스 운영정책에 따라 검증 API는 1회만 호출할 수 있습니다. 재시도시
      * 오류처리됩니다.
+     * - https://www.kakaocert.com/docs/ESign/API/java#A-VerifyESign
      */
     @RequestMapping(value = "verifyESignApp", method = RequestMethod.GET)
     public String verfiyESignApp(Model m) {
@@ -196,6 +200,7 @@ public class KakaocertServiceController {
 
     /*
      * 카카오톡 사용자에게 본인인증 전자서명을 요청합니다.
+     * - https://www.kakaocert.com/docs/verifyAuth/API/java#RequestVerifyAuth
      */
     @RequestMapping(value = "requestVerifyAuth", method = RequestMethod.GET)
     public String requestVerifyAuth(Model m) {
@@ -269,6 +274,7 @@ public class KakaocertServiceController {
 
     /*
      * 본인인증 요청시 반환된 접수아이디를 통해 서명 상태를 확인합니다.
+     * - https://www.kakaocert.com/docs/verifyAuth/API/java#GetVerifyAuthState
      */
     @RequestMapping(value = "getVerifyAuthState", method = RequestMethod.GET)
     public String getVerifyAuthState(Model m) {
@@ -290,6 +296,7 @@ public class KakaocertServiceController {
      * 본인인증 요청시 반환된 접수아이디를 통해 본인인증 서명을 검증합니다. - 서명검증시 전자서명 데이터 전문(signedData)이
      * 반환됩니다. - 본인인증 요청시 작성한 Token과 서명 검증시 반환되는 signedData의 동일여부를 확인하여 본인인증 검증을
      * 완료합니다. - 카카오페이 API 서비스 운영정책에 따라 검증 API는 1회만 호출할 수 있습니다. 재시도시 오류처리됩니다.
+     * - https://www.kakaocert.com/docs/verifyAuth/API/java#F-VerifyAuth
      */
     @RequestMapping(value = "verifyAuth", method = RequestMethod.GET)
     public String verifyAuth(Model m) {
@@ -309,6 +316,7 @@ public class KakaocertServiceController {
 
     /*
      * 카카오톡 사용자에게 자동이체 출금동의 전자서명을 요청합니다.
+     * - https://www.kakaocert.com/docs/CMS/API/java#RequestCMS
      */
     @RequestMapping(value = "requestCMS", method = RequestMethod.GET)
     public String requestCMS(Model m) {
@@ -395,6 +403,7 @@ public class KakaocertServiceController {
 
     /*
      * 자동이체 출금동의 요청시 반환된 접수아이디를 통해 서명 상태를 확인합니다.
+     * - https://www.kakaocert.com/docs/CMS/API/java#GetCMSState
      */
     @RequestMapping(value = "getCMSState", method = RequestMethod.GET)
     public String getCMSState(Model m) {
@@ -416,6 +425,7 @@ public class KakaocertServiceController {
      * [Talk Message] 자동이체 출금동의 요청시 반환된 접수아이디를 통해 서명을 검증합니다. - 서명검증시 전자서명 데이터
      * 전문(signedData)이 반환됩니다. - 카카오페이 API 서비스 운영정책에 따라 검증 API는 1회만 호출할 수 있습니다. 재시도시
      * 오류처리됩니다.
+     * - https://www.kakaocert.com/docs/CMS/API/java#T-VerifyCMS
      */
     @RequestMapping(value = "verifyCMS", method = RequestMethod.GET)
     public String verifyCMS(Model m) {
@@ -437,6 +447,7 @@ public class KakaocertServiceController {
      * [App to App] 자동이체 출금동의 요청시 반환된 접수아이디를 통해 서명을 검증합니다. - 서명검증시 전자서명 데이터
      * 전문(signedData)이 반환됩니다. - 카카오페이 API 서비스 운영정책에 따라 검증 API는 1회만 호출할 수 있습니다. 재시도시
      * 오류처리됩니다.
+     * - https://www.kakaocert.com/docs/CMS/API/java#A-VerifyCMS
      */
     @RequestMapping(value = "verifyCMSApp", method = RequestMethod.GET)
     public String verifyCMSApp(Model m) {
